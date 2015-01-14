@@ -29,6 +29,9 @@ extract this information from `Makefile.PL`. Since this is an executable script,
 we'll need to run it, but we don't want to actually produce a Makefile, hence
 the patch. (Another alternative would be to do a static analysis of the script.)
 
+Note: `Makefile.PL` using `Module::Install` works too, because under the hood
+it's still `ExtUtils::MakeMaker`.
+
 _
     args => {
         filename => {
