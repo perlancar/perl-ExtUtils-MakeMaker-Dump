@@ -92,4 +92,8 @@ sub dump_makefile_pl_script {
 
 =head1 SEE ALSO
 
+ExtUtils::MakeMaker has the option of printing the C<PREREQ_PM> key when
+C<Makefile.PL> is run with argument C<PREREQ_PRINT> (or C<PRINT_PREREQ>). But if
+you need the other keys, currently there is no option for that.
+
 L<Module::Build::Dump>
