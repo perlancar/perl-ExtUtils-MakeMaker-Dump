@@ -1,7 +1,12 @@
 Revision history for ExtUtils-MakeMaker-Dump
 
+0.02    2015-01-14 (PERLANCAR)
+
+        - No functional changes.
+
+        - [doc] Mention Module::Build and Module::Install.
+
+
 0.01    2015-01-14 (PERLANCAR)
 
         - First release.
-
-
