@@ -19,7 +19,7 @@ sub _dump {
     print "# END DUMP $config{-tag}\n";
 }
 
-sub _WriteMakefile(@) {
+sub _WriteMakefile {
     _dump({@_});
     $config{-exit_method} eq 'exit' ? exit(0) : die;
 }

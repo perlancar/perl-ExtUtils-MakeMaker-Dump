@@ -43,14 +43,14 @@ _
         },
     },
 };
-sub dump_getopt_long_script {
+sub dump_makefile_pl_script {
     require Capture::Tiny;
     require UUID::Random;
 
     my %args = @_;
 
     my $filename = $args{filename} or return [400, "Please specify filename"];
-    (-f $filename) or return [400, "No such file: $filename"];
+    (-f $filename) or return [404, "No such file: $filename"];
 
     my $libs = $args{libs} // [];
 
@@ -72,7 +72,7 @@ sub dump_getopt_long_script {
             return [500, "Error in eval-ing captured ".
                         "\\\%WriteMakefileArgs: $@, raw capture: <<<$1>>>"];
         }
-        if (ref($spec) ne 'HASH') {
+        if (ref($wmf_args) ne 'HASH') {
             return [500, "Didn't get a hash \%WriteMakefileArgs, ".
                         "raw capture: stdout=<<$stdout>>"];
         }
