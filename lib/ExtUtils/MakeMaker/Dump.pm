@@ -59,6 +59,7 @@ sub dump_makefile_pl_script {
     my $tag = UUID::Random::generate();
     my @cmd = (
         $^X, (map {"-I$_"} @$libs),
+        "-MTimeout::Self=3", # to defeat scripts that prompts for stuffs
         "-MExtUtils::MakeMaker::Patch::DumpAndExit=-tag,$tag",
         $filename,
         "--version",
