@@ -1,5 +1,10 @@
 Revision history for ExtUtils-MakeMaker-Dump
 
+0.03    2015-01-14 (PERLANCAR)
+
+	- Add timeout to get out of script that prompts interactively.
+
+
 0.02    2015-01-14 (PERLANCAR)
 
         - No functional changes.
