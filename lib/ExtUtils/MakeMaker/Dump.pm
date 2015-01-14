@@ -27,8 +27,7 @@ This is used for example in `App::lcpan` project. When a release file does not
 contain any `META.json` or `META.yml` file, the next best thing to try is to
 extract this information from `Makefile.PL`. Since this is an executable script,
 we'll need to run it, but we don't want to actually produce a Makefile, hence
-this script. (Another alternative would be to do a static analysis of the
-script.)
+the patch. (Another alternative would be to do a static analysis of the script.)
 
 _
     args => {
@@ -86,3 +85,7 @@ sub dump_makefile_pl_script {
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<Module::Build::Dump>
